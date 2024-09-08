@@ -1,0 +1,534 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(circle at top, #0f2027, #203a43, #2c5364);
+            color: #ffffff;
+            overflow-x: hidden;
+            background-image: url('https://www.greenyellow.vn/wp-content/uploads/2023/02/Reducing-our-personal-carbon-footprint.webp');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            animation: backgroundAnimation 15s ease infinite;
+}
+h1{
+    font-size: 160px;
+}
+h3{
+    font-size: 50px ;
+}
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    display: flex;
+}
+
+.Ai {
+    display: flex;
+    align-items: center; /* Vertically align items */
+    justify-content: space-between; /* Align items horizontally to the left */
+    gap: 20px; /* Add space between the button and the image */
+    margin-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.Ai button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Ai button:hover {
+    background-color: #004d40; /* Darker shade on hover */
+}
+
+.Ai img {
+    width: 450px; /* Set the width of the image */
+    height: auto;
+    border-radius: 10px; /* Optional: Add rounded corners to the image */
+}
+
+#chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    backdrop-filter: blur(50px);
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+#chatbot-window {
+    flex-grow: 1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#chatbot-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+#chatbot-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#send-message {
+    background-color: #004d40;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+#send-message:hover {
+    background-color: #004d40;
+}
+
+#chatbot-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #004d40;
+    color: white;
+    border-radius: 10px 10px 0 0;
+}
+
+#exit-chatbot {
+    background-color: #e57373;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#exit-chatbot:hover {
+    background-color: #d32f2f;
+}
+
+/* Sidebar Navigation */
+nav {
+    width: 250px;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+}
+
+nav ul {
+    list-style: none;
+    padding-top: 50px;
+}
+
+nav ul li {
+    margin: 20px 0;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+nav ul li:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+nav ul li:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+nav ul li:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    display: block;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-3px);
+}
+
+/* Main Content */
+.content {
+    flex-grow: 1;
+    padding: 40px;
+    margin: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(0px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    margin-left: 270px;
+    animation: fadeIn 1.2s ease-in-out;
+}
+.section-3{
+    padding-top: 130px;
+}
+/* Section Styling */
+.section {
+    margin-bottom: 40px;
+    padding: 30px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    font-size: 2.2rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 10px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.section p, .section label {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+/* Home Section Styling */
+.section#home {
+    background-color: #e0f7fa;
+    text-align: center;
+}
+
+.section#home h2 {
+    color: #ffffff;
+}
+
+.section#home p {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* Forms */
+.form-group {
+    margin-bottom: 25px;
+}
+
+input, select {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 300;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #ffffff;
+    box-shadow: 0 0 8px rgba(0, 121, 107, 0.6);
+}
+
+button {
+    background-color: #00796b;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+    background-color: #003d33;
+    transform: scale(1.05);
+}
+
+/* Table Styling */
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 1.1rem;
+}
+
+.price-table th, .price-table td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: left;
+}
+
+.price-table th {
+    background-color: #00796b;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.price-table td {
+    background-color: #f1f8e9;
+    color: #333;
+}
+
+.price-table tbody tr:hover {
+    background-color: #b2dfdb;
+    transition: background-color 0.3s ease;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    nav {
+        width: 100%;
+        position: relative;
+        height: auto;
+        padding: 10px 20px;
+        top: 0;
+    }
+
+    .content {
+        margin-left: 0;
+        margin-top: 20px;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .price-table {
+        font-size: 0.9rem;
+    }
+
+    .price-table th, .price-table td {
+        padding: 10px;
+    }
+}
+
+.sections {
+    margin-bottom: 60px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    scroll-padding-top: 180px;
+    backdrop-filter: blur(15px);
+}
+
+.sections:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+}
+
+.sections::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.1), transparent 70%);
+    transform: rotate(45deg);
+    z-index: 0;
+}
+
+.sections h2 {
+    position: relative;
+    z-index: 1;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    background: linear-gradient(to right, #082d38, #0072ff);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.sections h2 i {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.8rem;
+    color: #042630;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.sections p {
+    position: relative;
+    z-index: 1;
+    font-size: 1.2rem;
+    color: #121314;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: #0072ff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    font-size: 1.2rem;
+}
+
+.cta-button:hover {
+    background-color: #00c6ff;
+    transform: scale(1.1);
+}
+
+.team {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+.member {
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    margin: 20px;
+    width: 250px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.member:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.member img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+}
+
+.member img:hover {
+    transform: rotate(360deg);
+}
+
+.member h3 {
+    font-size: 1.2rem;
+    margin: 10px 0 5px;
+    color: #0c0d0e;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.member p {
+    font-size: 1rem;
+    color: black;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: #05213df8;
+    font-size: 1.5rem;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+    color: #0072ff;
+    transform: scale(1.2);
+}
+
+
+
+
+

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroSmart: Crop Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <nav>
+            <ul>
+                <img src="" alt="">
+            </ul>
+            <ul>
+                <li><a href="#ai-talk">Talk to AI</a></li>
+                <li><a href="#crop-input">Crop Input</a></li>
+                <li><a href="#nearby-centers">Nearby Selling Centers</a></li>
+                <li><a href="#ongoing-prices">Ongoing Prices</a></li>
+                <li><a href="#about-us">About Team</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Main Content -->
+        <div class="content">
+            <h1>CROPInspect</h1>
+            <h3>Farming Solutions</h3>
+            <h3>For all farmers</h3>
+            <h3>Nation-wide</h3>
+        
+            <!--Talk to ai content-->
+            <div class="section-3">
+                <!--Home content-->
+                <div class="section" id="ai-talk">
+                    <h2>Welcome to your friendly farming App.</h2>
+                    <div class="Ai">
+                        <button id="talk-to-ai">Talk to AI</button>
+                        <img src="./Untitled design.png" alt="Farmer Image">
+    
+                        <!-- Chatbot Section -->
+                        <div id="chatbot-container" style="display: none;">
+                            <div id="chatbot-window">
+                                <div id="chatbot-header">
+                                    <span>AI Chatbot</span>
+                                    <button id="exit-chatbot">X</button> <!-- Exit button -->
+                                </div>
+                                <div id="chatbot-messages"></div>
+                                <input type="text" id="chatbot-input" placeholder="Ask something...">
+                                <button id="send-message">Send</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Crop Input Section -->
+                <div class="section" id="crop-input">
+                    <h2>Crop Input</h2>
+                    <form id="crop-form">
+                        <div class="form-group">
+                            <label for="crop-name">Crop Name:</label>
+                            <select id="crop-name" name="crop-name">
+                                <option value="wheat">Wheat</option>
+                                <option value="rice">Rice</option>
+                                <option value="cotton">Cotton</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="area">Area (in acres):</label>
+                            <input type="number" id="area" name="area" placeholder="Enter area size">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="season">Season:</label>
+                            <select id="season" name="season">
+                                <option value="kharif">Kharif</option>
+                                <option value="rabi">Rabi</option>
+                                <option value="zaid">Zaid</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <button type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+    
+                <!-- Nearby Selling Centers Section -->
+                <div class="section" id="nearby-centers">
+                    <h2>Nearby Selling Centers</h2>
+                    <p>Find the nearest selling centers based on your crop and location.</p>
+                    <ul id="centers-list">
+                        <li>Center 1: Address, Distance</li>
+                        <li>Center 2: Address, Distance</li>
+                        <li>Center 3: Address, Distance</li>
+                    </ul>
+                </div>
+    
+                <!-- Ongoing Prices Section -->
+                <div class="section" id="ongoing-prices">
+                    <h2>Ongoing Prices</h2>
+                    <table class="price-table">
+                        <thead>
+                            <tr>
+                                <th>Crop</th>
+                                <th>Price per Quintal (₹)</th>
+                                <th>Location</th>
+                            </tr>
+                        </thead>
+                        <tbody id="price-table-body">
+                            <tr>
+                                <td>Wheat</td>
+                                <td>₹2,000</td>
+                                <td>Delhi</td>
+                            </tr>
+                            <tr>
+                                <td>Rice</td>
+                                <td>₹2,500</td>
+                                <td>Mumbai</td>
+                            </tr>
+                            <tr>
+                                <td>Cotton</td>
+                                <td>₹4,000</td>
+                                <td>Pune</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="sections" id="about-us">
+                    <h2><i class="fas fa-users"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Meet the Team</h2>
+                    <div class="team">
+                        <div class="member">
+                            <img src="./Untitled design.png" alt="Poimanti Hazra">
+                            <h3>Poimanti Hazra</h3>
+                            <p>Frontend Developer</p>
+                            <div class="social-icons">
+                                <a href="mailto:poimanti@example.com"><i class="fas fa-envelope"></i></a>
+                                <a href="https://github.com/PoiHazra" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://www.linkedin.com/in/poimanti-hazra-96b068255" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+        
+                        <div class="member">
+                            <img src="./Untitled design.png" alt="Riddhi Bandyopadhyay">
+                            <h3>Riddhi Bandyopadhyay</h3>
+                            <p>Machine Learning Developer</p>
+                            <div class="social-icons">
+                                <a href="mailto:riddhi@example.com"><i class="fas fa-envelope"></i></a>
+                                <a href="https://github.com/Riddhi1511" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://www.linkedin.com/in/riddhi-bandyopadhyay-2a5644277" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+        
+                        <div class="member">
+                            <img src="./Untitled design.png" alt="Bhavyata Kaur">
+                            <h3>Bhavyata Kaur</h3>
+                            <p>Full Stack Machine Learning Developer</p>
+                            <div class="social-icons">
+                                <a href="mailto:bhavyata@example.com"><i class="fas fa-envelope"></i></a>
+                                <a href="https://github.com/bhavyatakaur03" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://www.linkedin.com/in/bhavyata-kaur" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="member">
+                            <img src="./Untitled design.png" alt="Poimanti Hazra">
+                            <h3>Poimanti Hazra</h3>
+                            <p>Frontend Developer</p>
+                            <div class="social-icons">
+                                <a href="mailto:poimanti@example.com"><i class="fas fa-envelope"></i></a>
+                                <a href="https://github.com/PoiHazra" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://www.linkedin.com/in/poimanti-hazra-96b068255" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+        
+                        <div class="member">
+                            <img src="./Untitled design.png" alt="Riddhi Bandyopadhyay">
+                            <h3>Riddhi Bandyopadhyay</h3>
+                            <p>Machine Learning Developer</p>
+                            <div class="social-icons">
+                                <a href="mailto:riddhi@example.com"><i class="fas fa-envelope"></i></a>
+                                <a href="https://github.com/Riddhi1511" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://www.linkedin.com/in/riddhi-bandyopadhyay-2a5644277" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+        
+                        <div class="member">
+                            <img src="./Untitled design.png" alt="Bhavyata Kaur">
+                            <h3>Bhavyata Kaur</h3>
+                            <p>Full Stack Machine Learning Developer</p>
+                            <div class="social-icons">
+                                <a href="mailto:bhavyata@example.com"><i class="fas fa-envelope"></i></a>
+                                <a href="https://github.com/bhavyatakaur03" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://www.linkedin.com/in/bhavyata-kaur" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 AgroSmart. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
